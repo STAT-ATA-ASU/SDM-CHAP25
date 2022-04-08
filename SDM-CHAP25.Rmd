@@ -44,15 +44,16 @@ $$
 
 
 Consider the identity
-\begin{equation}\label{IDEN}
+\begin{equation}
 y_{ij} - \bar{\bar{y}} = (\bar{y}_i - \bar{\bar{y}}) + (y_{ij} -
 \bar{y}_i)
+(\#eq:IDEN)
 \end{equation}
 which partitions the deviation of any observation from the grand mean into two parts.  The first part, $(\bar{y}_i - \bar{\bar{y}})$, is the deviation of the $i^{th}$ treatment mean from the grand mean.  The second part is the deviation of the observation from the $i^{th}$ treatment mean.
 
 If all of the $n_i$ values are the same, we have a balanced design...which makes the calculation easier.
 
-Squaring and summing both sides of \eqref{IDEN} produces
+Squaring and summing both sides of \@ref(eq:IDEN) produces
 \begin{align}
 \sum_{i=1}^{k} \sum_{j=1}^{n_i} (y_{ij} - \bar{\bar{y}})^2 &=
 \sum_{i=1}^{k} \sum_{j=1}^{n_i} \bigl[ (\bar{y}_i -
@@ -60,9 +61,10 @@ Squaring and summing both sides of \eqref{IDEN} produces
 &= \sum_{i=1}^k n_i (\bar{y}_i -
 \bar{\bar{y}})^2 + \sum_{i=1}^{k} \sum_{j=1}^{n_i} (y_{ij} - \bar{y}_i)^2 \nonumber\\
 &\quad+ 2 \sum_{i=1}^{k} \sum_{j=1}^{n_i} (\bar{y}_i -
-\bar{\bar{y}})(y_{ij} - \bar{y}_i)\label{IDENA}
+\bar{\bar{y}})(y_{ij} - \bar{y}_i)
+(\#eq:IDENA)
 \end{align}
-However, the cross product in \eqref{IDENA} is zero since
+However, the cross product in \@ref(eq:IDENA) is zero since
 \begin{equation*}
 \sum_{j=1}^{n_i} (y_{ij} - \bar{y}_i) = \sum_{j=1}^{n_i} y_{ij} - n_i\bar{y}_i =
 \sum_{j=1}^{n_i} y_{ij} - n_i \cdot \frac{\sum_{j=1}^{n_i} y_{ij}}{n_i} = 0.
@@ -71,12 +73,13 @@ However, the cross product in \eqref{IDENA} is zero since
 ________________________
 
 After lots of algebra, we can derive the expression
-\begin{equation}\label{SSIDEN}
+\begin{equation}
 \sum_{i=1}^{k} \sum_{j=1}^{n_i} (y_{ij} - \bar{\bar{y}})^2 =\sum_{i=1}^k
 n_i (\bar{y}_i - \bar{\bar{y}})^2 + \sum_{i=1}^{k} \sum_{j=1}^{n_i}
 (y_{ij} - \bar{y}_i)^2
+(\#eq:SSIDEN)
 \end{equation}
-which says the total variability in the data can be partitioned into two parts. The quantity $\sum_{i=1}^k n_i (\bar{y}_i - \bar{\bar{y}})^2$ measures the difference between the observed treatment means and the grand mean. Specifically, it is a measure of variability due to the treatments and is denoted $SS_\text{Treatment}$ (sum of squares due to treatments).\index{treatments}  The quantity $\sum_{i=1}^{k} \sum_{j=1}^{n_i} (y_{ij} - \bar{y}_i)^2$ measures the differences of observations within a treatment from the treatment mean, which must be due to error and is referred to as $SS_\text{Error}$ (sum of squares due to error).  The quantity on the left-hand side of the equals sign in \eqref{SSIDEN} is called the total sum of squares corrected for the mean and is denoted $SS_\text{Total}$.  The symbolic representation of \eqref{SSIDEN} is
+which says the total variability in the data can be partitioned into two parts. The quantity $\sum_{i=1}^k n_i (\bar{y}_i - \bar{\bar{y}})^2$ measures the difference between the observed treatment means and the grand mean. Specifically, it is a measure of variability due to the treatments and is denoted $SS_\text{Treatment}$ (sum of squares due to treatments).  The quantity $\sum_{i=1}^{k} \sum_{j=1}^{n_i} (y_{ij} - \bar{y}_i)^2$ measures the differences of observations within a treatment from the treatment mean, which must be due to error and is referred to as $SS_\text{Error}$ (sum of squares due to error).  The quantity on the left-hand side of the equals sign in \@ref(eq:SSIDEN) is called the total sum of squares corrected for the mean and is denoted $SS_\text{Total}$.  The symbolic representation of \@ref(eq:SSIDEN) is
 
 \begin{equation}
 SS_\text{Total} = SS_\text{Treatment} + SS_\text{Error}
