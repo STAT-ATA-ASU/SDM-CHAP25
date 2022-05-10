@@ -2,7 +2,9 @@
 title: "ANOVA"
 author: "Alan T. Arnholt"
 date: 'Last compiled: `r format(Sys.time(), "%B %d, %Y at %X")`'
-output: bookdown::html_document2
+output: 
+  bookdown::html_document2:
+    keep_tex: yes
 ---
 
 ```{r setup, include=FALSE}
